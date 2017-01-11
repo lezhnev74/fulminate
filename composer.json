@@ -1,0 +1,23 @@
+{
+    "name": "lezhnev74/fulminate",
+    "description": "Simple HTTP based monitoring system with configurable sensors",
+    "type": "project",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Dmitriy Lezhnev",
+            "email": "lezhnev.work@gmail.com"
+        }
+    ],
+    "require": {
+
+    },
+    "require-dev": {
+
+    },
+    "autoload": {
+        "psr-4": {
+            "Fulminate\\": "src/"
+        }
+    }
+}
