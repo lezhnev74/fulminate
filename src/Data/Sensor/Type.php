@@ -1,5 +1,5 @@
 <?php
-namespace src\Data\Sensor;
+namespace Fulminate\Data\Sensor;
 
 class Type
 {

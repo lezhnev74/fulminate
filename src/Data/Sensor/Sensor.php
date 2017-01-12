@@ -1,10 +1,10 @@
 <?php
 namespace Fulminate\Data\Sensor;
 
-use src\Data\Sensor\Id;
-use src\Data\Sensor\Rule\Bag;
-use src\Data\Sensor\Status;
-use src\Data\Sensor\Type;
+use Fulminate\Data\Sensor\Id;
+use Fulminate\Data\Sensor\Rule\Bag;
+use Fulminate\Data\Sensor\Status;
+use Fulminate\Data\Sensor\Type;
 
 class Sensor
 {

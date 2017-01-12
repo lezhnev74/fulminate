@@ -2,7 +2,7 @@
 namespace Fulminate\Data\Sensor\Rule;
 
 
-use src\Data\Sensor\Status;
+use Fulminate\Data\Sensor\Status;
 
 interface RuleInterface
 {

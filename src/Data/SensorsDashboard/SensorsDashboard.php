@@ -1,8 +1,13 @@
 <?php
-namespace src\Data\SensorsDashboard;
+namespace Fulminate\Data\SensorsDashboard;
 
-use src\Data\Sensor\Id;
-use src\Data\Sensor\Status;
+use Carbon\Carbon;
+use Fulminate\Data\Sensor\Config;
+use Fulminate\Data\Sensor\Sensor;
+use Fulminate\Data\Sensor\Id;
+use Fulminate\Data\Sensor\Rule\Bag;
+use Fulminate\Data\Sensor\Status;
+use Fulminate\Data\Sensor\Type;
 
 class SensorsDashboard
 {
@@ -11,13 +16,31 @@ class SensorsDashboard
     /**
      * Factory method
      *
-     * @param array $config
+     * @param Config $config
      *
      * @return SensorsDashboard
      */
-    static public function fromConfig(array $config): self
+    static public function fromConfig(Config $config): self
     {
+        $sensors = [];
+        foreach($config->getConfig() as $sensor_config) {
+            $sensors[] = new Sensor(
+                new Id($sensor_config['id']),
+                $sensor_config['name'],
+                new Type(
+                    $sensor_config['type']['type'],
+                    $sensor_config['type']['status_update_frequency'] ?? null,
+                    $sensor_config['type']['url'] ?? null,
+                    $sensor_config['type']['host'] ?? null,
+                    $sensor_config['type']['https'] ?? null,
+                    $sensor_config['type']['ip_list'] ?? []
+                ),
+                new Bag(),
+                new Status(null, [], Carbon::now())
+            );
+        }
         
+        return new static($sensors);
     }
     
     /**

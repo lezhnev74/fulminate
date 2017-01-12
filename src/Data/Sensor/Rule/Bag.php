@@ -1,7 +1,7 @@
 <?php
-namespace src\Data\Sensor\Rule;
+namespace Fulminate\Data\Sensor\Rule;
 
-use src\Data\Sensor\Status;
+use Fulminate\Data\Sensor\Status;
 
 class Bag
 {
