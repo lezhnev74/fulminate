@@ -4,6 +4,7 @@ return [
     
     'sensors' => [
         [
+            'id' => 's1', // unique ID of this sensor
             'name' => 'API available',
             'type' => [
                 'type' => 'active',
@@ -31,6 +32,7 @@ return [
         ],
         
         [
+            'id' => 's2',
             'name' => 'API queue health',
             'type' => [
                 'type' => 'passive',

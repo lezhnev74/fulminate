@@ -1,25 +1,17 @@
 <?php
+use Carbon\Carbon;
 use \Psr\Http\Message\ServerRequestInterface as Request;
 use \Psr\Http\Message\ResponseInterface as Response;
 
-require "../vendor/autoload.php";
+require __DIR__."/../bootstrap.php";
 
-//////////////////////////////////////////////////////
-// .env loader
-$dotenv = new Dotenv\Dotenv(__DIR__);
-$dotenv->load();
-// helper function to get env or default value
-function env($var_name, $default = null)
-{
-    return getenv($var_name) ?? $default;
-}
 
-//////////////////////////////////////////////////////
-// SLIM FRAMEWORK init
-$app = new \Slim\App();
-// routes
+//
+// HTTP routes
+//
 $app->get('/', function(Request $request, Response $response) {
     
+    $response->getBody()->write("Ok");
     
     return $response;
 });
