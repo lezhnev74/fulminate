@@ -1,5 +1,5 @@
 <?php
-namespace Fulminate\Data\Rule;
+namespace Fulminate\Data\Sensor\Rule;
 
 class RuleFailed extends \Exception
 {

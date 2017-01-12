@@ -36,7 +36,6 @@ return [
             'name' => 'API queue health',
             'type' => [
                 'type' => 'passive',
-                'key' => 'api-queue-health' // to use in URL generation to receive passive status updates
             ],
             'rules' => [
                 'type' => 'http_code_regexp',

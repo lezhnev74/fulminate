@@ -1,6 +1,8 @@
 <?php
-namespace Fulminate\Data\Rule;
+namespace Fulminate\Data\Sensor\Rule;
 
+
+use src\Data\Sensor\Status;
 
 interface RuleInterface
 {
@@ -13,7 +15,7 @@ interface RuleInterface
      *
      * @return void
      */
-    function validate($sensor_status);
+    function validate(Status $sensor_status);
     
     /**
      * Return the name of this rule for reporting
